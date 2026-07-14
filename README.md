@@ -109,7 +109,7 @@ The CSS-300 benchmark was developed through the contributions of the research te
 
 - **[@Aryan-Sonone](https://github.com/Aryan-Sonone)** — Contributor
 - **[@Nikhil10062006](https://github.com/Nikhil10062006)** — Contributor
-- 
+  
 ## Contact
 
 For questions, issues, or collaboration opportunities, please open an issue in this repository or contact the corresponding authors listed in the accompanying manuscript.
