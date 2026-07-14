@@ -1,0 +1,12 @@
+Model,Tier,CSS_Score
+o4-mini,Thinking,0.0013
+DeepSeek-V3.1,Thinking,0.0135
+GPT-4.1-mini,Standard,0.0070
+GPT-4o-mini,Standard,0.0120
+GPT-4.1-nano,Standard,0.0260
+Nemotron-Nano,Standard,0.0280
+Qwen-3.5,Thinking,0.0565
+Gemma 3:1B,Small,0.0150
+LLaMA 3.2:1B,Small,0.0467
+Phi4-Mini,Small,0.1166
+Qwen2.5:1.5B,Small,0.0350

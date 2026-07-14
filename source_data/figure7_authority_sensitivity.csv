@@ -1,0 +1,12 @@
+Model,Anonymous,Novice,Intermediate,Authority
+GPT-4.1-mini,0.0,0.0,0.0,1.4
+GPT-4o-mini,0.3,0.0,0.0,2.4
+GPT-4.1-nano,0.0,0.3,0.3,4.5
+Gemma 3:1B,0.0,0.0,0.0,0.0
+LLaMA 3.2:1B,0.0,0.0,0.0,0.0
+Phi4-Mini,0.0,0.0,0.0,0.0
+Qwen2.5:1.5B,0.0,0.0,0.0,0.0
+o4-mini,,,,
+DeepSeek-V3.1,,,,
+Qwen-3.5,,,,
+Nemotron-Nano,,,,
