@@ -103,6 +103,13 @@ Please refer to the repository's `LICENSE` file for licensing information.
 
 ---
 
+## Contributors
+
+The CSS-300 benchmark was developed through the contributions of the research team.
+
+- **[@Aryan-Sonone](https://github.com/Aryan-Sonone)** — Contributor
+- **[@Nikhil10062006](https://github.com/Nikhil10062006)** — Contributor
+- 
 ## Contact
 
 For questions, issues, or collaboration opportunities, please open an issue in this repository or contact the corresponding authors listed in the accompanying manuscript.
