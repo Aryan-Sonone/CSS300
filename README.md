@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎯🔥 CSS-300 🔥🎯
+#  CSS-300 
 ### 🌈 A Multi-Dimensional Benchmark for Decomposing Source-Preference Sycophancy in RAG 🌈
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3000&pause=1000&color=F72585&center=true&vCenter=true&multiline=true&width=800&height=100&lines=Measuring+Source-Preference+Sycophancy%3Bin+Retrieval-Augmented+Generation+%F0%9F%9A%80%3B300+Curated+Evaluation+Instances+%F0%9F%A7%A0" alt="Typing SVG" />
