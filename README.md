@@ -11,6 +11,7 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD43B)
 ![RAG](https://img.shields.io/badge/RAG-Retrieval%20Augmented%20Generation-8A2BE2?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-See%20LICENSE-00C9A7?style=for-the-badge)
+![Desktop App](https://img.shields.io/badge/Desktop%20App-Linux%20(.deb%20%2F%20AppImage)-1e2327?style=for-the-badge&logo=linux&logoColor=white)
 
 ![Stars](https://img.shields.io/github/stars/Nikhil10062006/CSS300?style=for-the-badge&color=FFD700&label=⭐%20Stars)
 ![Forks](https://img.shields.io/github/forks/Nikhil10062006/CSS300?style=for-the-badge&color=1E90FF&label=🍴%20Forks)
@@ -36,6 +37,48 @@
 | Measure sycophancy in RAG | **300** curated cases | Retrieval-Augmented Generation | ✅ Active |
 
 </div>
+
+---
+
+## 🖥️ Run It Yourself — CSS-300 Desktop App
+
+<div align="center">
+
+**This repository hosts the paper's dataset, figures, and source data.**
+**To actually *run* the benchmark against a model, use the companion Linux desktop application:**
+
+### 👉 [Aryan-Sonone/CSS300-application](https://github.com/Aryan-Sonone/CSS300-application) 👈
+
+[![Open the CSS-300 Desktop App repo](https://img.shields.io/badge/Open-CSS--300--application-F72585?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Aryan-Sonone/CSS300-application)
+[![Platform](https://img.shields.io/badge/Platform-Linux%20(Debian%2FUbuntu)-blue?style=for-the-badge&logo=linux&logoColor=white)](https://github.com/Aryan-Sonone/CSS300-application#prerequisites)
+[![Built with Tauri](https://img.shields.io/badge/Built%20with-Tauri%20v2%20%2B%20Rust%20%2B%20React-24C8DB?style=for-the-badge&logo=tauri&logoColor=white)](https://github.com/Aryan-Sonone/CSS300-application#architecture-overview)
+
+</div>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 📦 This repo (`CSS-300`)
+- The **benchmark dataset** (`dataset.json`)
+- **Figures & source data** from the manuscript
+- Static artifacts for citation & reproducibility
+- No code execution — data only
+
+</td>
+<td width="50%" valign="top">
+
+### 🖥️ [`CSS300-application`](https://github.com/Aryan-Sonone/CSS300-application)
+- A **Tauri + Rust + React** desktop app for Linux (`.deb` / AppImage)
+- Bundles this dataset and runs it against any model via API
+- Live progress, checkpointing, and scored reports (CSS, ASR, MAS, SAG, RDR)
+- The **executable evaluation engine** behind the paper's results
+
+</td>
+</tr>
+</table>
+
+> 💡 In short: **this repo is the "what"** (the benchmark itself), and **CSS300-application is the "how"** (the tool that runs it end-to-end on your machine).
 
 ---
 
@@ -86,6 +129,8 @@ CSS-300/
 
 </div>
 
+> 🔗 Looking for the code that consumes this dataset? See [`CSS300-application/nvidia/CSS300_Dataset.json`](https://github.com/Aryan-Sonone/CSS300-application/tree/main/nvidia) and the [sidecar execution engine](https://github.com/Aryan-Sonone/CSS300-application/tree/main/sidecar) in the desktop app repo.
+
 ---
 
 ## 🚀 The Dataset
@@ -113,7 +158,19 @@ The benchmark is built for:
 - 🧠 **Alignment & interpretability** research
 - ⚖️ **Comparative evaluation** across language models and retrieval pipelines
 
-> 📖 For construction methodology, taxonomy, and evaluation protocol, see the accompanying manuscript.
+Every instance is scored across three pillars — reused directly by the desktop app's reporting engine:
+
+<div align="center">
+
+| Pillar | What it measures |
+|:--|:--|
+| 🧩 **Cognitive — Reasoning Dissonance (RDR)** | Cases where a model resolves conflicting evidence correctly in its reasoning trace, but flips to the wrong final answer. |
+| 🗣️ **Social — Authority Sensitivity (ASR)** | Susceptibility to social/credential cues, driven by specificity of the credential rather than rank alone. |
+| ⏳ **Temporal — Memory Anchoring (MAS)** | How strongly a model's belief anchors to information shown earlier in context. |
+
+</div>
+
+> 📖 For construction methodology, taxonomy, and evaluation protocol, see the accompanying manuscript. For a **hands-on scored run** of these pillars against a live model, use the [desktop app](https://github.com/Aryan-Sonone/CSS300-application).
 
 ---
 
@@ -126,10 +183,11 @@ The benchmark is built for:
 | 🧾 | Complete benchmark dataset |
 | 🖼️ | Figures used in the paper |
 | 📊 | Source data behind every figure & table |
+| 🖥️ | End-to-end runnable evaluation via [CSS300-application](https://github.com/Aryan-Sonone/CSS300-application) |
 
 </div>
 
-Everything you need to **reproduce every analysis** and build on top of the benchmark is right here.
+Everything you need to **reproduce every analysis** is in this repository; everything you need to **re-run the benchmark against a new model** is in the [desktop application](https://github.com/Aryan-Sonone/CSS300-application).
 
 ---
 
@@ -140,13 +198,15 @@ graph LR
     A[🤖 AI-Assisted Generation] --> B[👥 Independent Human Annotation]
     B --> C[✅ Multi-Stage Validation]
     C --> D[🎯 CSS-300 Benchmark]
+    D --> E[🖥️ CSS300-application]
     style A fill:#F72585,color:#fff,stroke:#333
     style B fill:#7209B7,color:#fff,stroke:#333
     style C fill:#3A0CA3,color:#fff,stroke:#333
     style D fill:#00C9A7,color:#fff,stroke:#333
+    style E fill:#1e2327,color:#fff,stroke:#333
 ```
 
-The benchmark was generated via an **AI-assisted pipeline**, then independently annotated and validated by the research team, with **multiple stages of quality-assurance review**.
+The benchmark was generated via an **AI-assisted pipeline**, then independently annotated and validated by the research team, with **multiple stages of quality-assurance review**. The validated dataset is bundled directly into the [CSS300-application](https://github.com/Aryan-Sonone/CSS300-application) so it can be run against any model without extra setup.
 
 ---
 
@@ -183,13 +243,13 @@ If CSS-300 powers your research, please cite:
 }
 ```
 
-> ✏️ Update with final publication details once available.
+> ✏️ Update with final publication details once available. If you use the desktop application itself, also see the [citation entry in CSS300-application](https://github.com/Aryan-Sonone/CSS300-application#citation).
 
 ---
 
 ## 📄 License
 
-Please refer to the repository's `LICENSE` file for licensing information.
+Please refer to the repository's `LICENSE` file for licensing information. Note that the [CSS300-application](https://github.com/Aryan-Sonone/CSS300-application) repo is licensed separately (MIT codebase; CC BY 4.0 for the bundled dataset copy).
 
 ---
 
@@ -208,7 +268,7 @@ Please refer to the repository's `LICENSE` file for licensing information.
 
 Questions, issues, or collaboration ideas? 🎉
 
-- 🐛 Open an issue in this repository
+- 🐛 Open an issue in this repository (dataset/paper) or in [CSS300-application](https://github.com/Aryan-Sonone/CSS300-application/issues) (desktop app)
 - ✉️ Reach out to the corresponding authors listed in the manuscript
 
 ---
@@ -217,6 +277,7 @@ Questions, issues, or collaboration ideas? 🎉
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%"/>
 
-### ⭐ If CSS-300 helps your research, consider starring the repo! ⭐
+### ⭐ If CSS-300 helps your research, consider starring both repos! ⭐
+[CSS-300 (paper & data)](https://github.com/Aryan-Sonone/CSS300) · [CSS300-application (desktop app)](https://github.com/Aryan-Sonone/CSS300-application)
 
 </div>
